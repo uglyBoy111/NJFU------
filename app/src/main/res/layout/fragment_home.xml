@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_200"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="80dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <!-- 头部日期时间显示 -->
+        <TextView
+            android:id="@+id/tv_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"/>
+
+        <!-- 考试信息卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="@color/gray_100"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="?attr/colorSurface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_200"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tv_distance_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离"
+                    android:textColor="?attr/colorOnSurface"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_exam_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="XXX考试"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_days_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还有xx天"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 题库列表标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="8dp"
+            android:text="最近题库"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!-- 题库列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingVertical="8dp"
+            tools:listitem="@layout/item_question_bank"/>
+    </LinearLayout>
+</FrameLayout>

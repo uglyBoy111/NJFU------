@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@color/gray_100"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/gray_100"
+        android:src="@drawable/img"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:background="@color/gray_100"
+        android:paddingEnd="16dp">
+
+        <!-- 主标题 (最大字号) -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/gray_800"
+            android:background="@color/gray_100"
+            android:textStyle="bold"
+            tools:text="主标题文字"/>
+
+        <!-- 副标题 -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/gray_600"
+            android:background="@color/gray_100"
+            android:layout_marginTop="4dp"
+            tools:text="副标题文字"/>
+
+        <!-- 描述 -->
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/gray_600"
+            android:background="@color/gray_100"
+            android:layout_marginTop="2dp"
+            tools:text="描述文字"/>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/gray_900"/>
+</LinearLayout>

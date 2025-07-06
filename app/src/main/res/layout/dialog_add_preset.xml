@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="配置名称"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/preset_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入配置名称"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单选题数量"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/danxuan_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入单选题数量"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单选题每题分数"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/danxuan_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入单选题每题分数"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多选题数量"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/duoxuan_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入多选题数量"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多选题每题分数"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/duoxuan_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入多选题每题分数"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="判断题数量"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/panduan_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入判断题数量"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="判断题每题分数"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/panduan_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入判断题每题分数"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="考试时间(分钟)"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/exam_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入考试时间(分钟)"/>
+    </LinearLayout>
+</ScrollView>

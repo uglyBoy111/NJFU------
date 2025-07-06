@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_200"
+    tools:context=".ui4.MidActivity">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="历史成绩"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="@color/gray_200"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 连对量统计卡片 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:background="@color/gray_100"
+        app:layout_constraintTop_toBottomOf="@id/title_text">
+<!--#$#卡片内我想放一张折线图，纵轴是分数，横轴是时间-->
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/scoreChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"/>
+
+    </androidx.cardview.widget.CardView>
+    <!-- 标题 -->
+    <!-- 选择试卷预设标题行（新增RelativeLayout包裹） -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        >
+
+        <TextView
+            android:id="@+id/title_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择试卷预设"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:background="?attr/selectableItemBackgroundBorderless"
+
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/add_preset_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="35dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/book_bookmark_duotone_icon"
+            android:background="@color/gray_200"
+            android:contentDescription="添加预设"/>
+    </RelativeLayout>
+
+    <!-- 试卷预设选择卡片 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:background="@color/gray_100">
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/preset_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingTop="60dp"
+        android:background="@color/gray_100">
+
+        <RadioGroup
+            android:id="@+id/preset_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/gray_100">
+
+            <!-- 预设选项将通过代码动态添加 -->
+
+        </RadioGroup>
+    </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- 确认按钮 -->
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/black"
+        android:text="开始模拟考试"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <!-- Question type group with icons and consistent styling -->
+    <group android:checkableBehavior="single"
+        android:menuCategory="container"
+        app:itemBackground="@drawable/nav_item_background"
+        app:itemTextColor="@color/nav_item_text_color"
+        app:itemIconTint="@color/nav_item_icon_tint">
+
+        <item
+            android:id="@+id/menu_single_choice"
+            android:icon="@drawable/ic_radio_button_checked"
+            android:title="单选题"
+            app:actionViewClass="androidx.appcompat.widget.LinearLayoutCompat"/>
+
+        <item
+            android:id="@+id/menu_multi_choice"
+            android:icon="@drawable/ic_check_box"
+            android:title="多选题"
+            app:actionViewClass="androidx.appcompat.widget.LinearLayoutCompat"/>
+
+        <item
+            android:id="@+id/menu_true_false"
+            android:icon="@drawable/ic_toggle_on"
+            android:title="判断题"
+            app:actionViewClass="androidx.appcompat.widget.LinearLayoutCompat"/>
+    </group>
+
+
+</menu>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_300">
+
+    <!-- 添加搜索栏 -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:queryHint="搜索题库"
+        app:iconifiedByDefault="false" />
+
+    <!-- Loading indicator -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"/>
+
+    <!-- Error message -->
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:visibility="gone"/>
+
+    <!-- Retry button -->
+    <Button
+        android:id="@+id/retryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="重试"
+        android:visibility="gone"/>
+
+    <!-- 列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:overScrollMode="never"/>
+
+    <!-- 添加按钮 -->
+    <Button
+        android:id="@+id/btnAddSelected"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="添加选中题库"
+        android:background="@color/white"
+        android:textColor="@color/gray_100"
+        android:textSize="16sp"/>
+</LinearLayout>

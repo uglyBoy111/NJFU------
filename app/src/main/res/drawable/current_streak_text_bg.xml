@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 选中状态 -->
+<item android:state_selected="true">
+    <shape android:shape="rectangle">
+        <solid android:color="@color/colorPrimary"  /> <!-- 例如 #FF4081 -->
+        <size android:width="36dp" android:height="36dp"/>
+        <corners android:radius="12dp"/>
+    </shape>
+</item>
+<!-- 默认状态 -->
+<item>
+    <shape android:shape="rectangle">
+        <solid android:color="@color/gray_200" /> <!-- 例如 #3F51B5 -->
+        <size android:width="36dp" android:height="36dp"/>
+        <corners android:radius="12dp"/>
+    </shape>
+</item>
+</selector>

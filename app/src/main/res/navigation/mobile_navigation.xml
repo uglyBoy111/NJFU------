@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  导航图定义文件 - 应用的核心导航结构
+  功能：
+  1. 定义所有可导航的目标(Fragment/Activity)
+  2. 管理导航关系和参数传递
+  3. 配置转场动画和深层链接
+-->
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+
+    app:startDestination="@id/nav_home">
+
+    <fragment
+    android:id="@+id/nav_home"
+    android:name="com.yuanseen.shuati.ui.home.HomeFragment"
+    android:label="@string/menu_home"
+    tools:layout="@layout/fragment_home" />
+
+    <fragment
+    android:id="@+id/nav_gallery"
+    android:name="com.yuanseen.shuati.ui.gallery.GalleryFragment"
+    android:label="@string/menu_gallery"
+    tools:layout="@layout/fragment_gallery" />
+
+
+    <fragment
+    android:id="@+id/nav_slideshow"
+    android:name="com.yuanseen.shuati.ui.slideshow.SlideshowFragment"
+    android:label="@string/menu_slideshow"
+    tools:layout="@layout/fragment_slideshow" />
+
+    </navigation>

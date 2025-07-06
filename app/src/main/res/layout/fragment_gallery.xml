@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_200">
+
+    <!-- 顶部标题区域 -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的题库"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@color/gray_200"/>
+
+    <!-- 添加按钮卡片 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:background="@color/gray_100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:background="@color/gray_100">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/shopping_cart_duotone_icon"
+                android:background="@color/gray_100"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="点击加号添加新题库"
+                android:textSize="16sp"
+                android:background="@color/gray_100"
+                android:textColor="@color/gray_700"/>
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="添加题库"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 题库列表卡片 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:background="@color/gray_100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_100">
+
+            <TextView
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="暂无题库，点击上方添加按钮"
+                android:textSize="16sp"
+                android:textColor="@color/gray_700"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:padding="8dp"
+                tools:listitem="@layout/item_question_bank" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

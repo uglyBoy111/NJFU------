@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/gray_200">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless">
+
+        <LinearLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="70dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless">
+            <!-- 添加进度条 -->
+            <ProgressBar
+                android:id="@+id/question_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginBottom="8dp"
+                android:progressDrawable="@drawable/progress_bar_style"
+                android:max="100"
+                android:progress="0"
+                tools:progress="50" />
+
+            <!-- 卡片式容器 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <!-- 题型和题号 -->
+                    <TextView
+                        android:id="@+id/question_type_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"
+                        tools:text="单选题 | 第5题"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                    <!-- 题干 -->
+                    <TextView
+                        android:id="@+id/question_content_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:lineSpacingExtra="6dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        tools:text="这是一道示例题目，请选择正确的答案。"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                    <!-- 选项列表 -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/question_options_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:clipToPadding="false"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:choiceMode="singleChoice"
+                        />
+
+                    <!-- 在选项列表下方添加确认按钮 -->
+                    <Button
+                        android:id="@+id/btn_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="5dp"
+                        android:text="确认"
+                        android:visibility="gone"
+                      />
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity=""
+                android:paddingHorizontal="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"> <!-- 添加左右内边距，避免按钮贴边 -->
+
+                <!-- 答案文本，左对齐，权重为1以填充中间空间 -->
+                <TextView
+                    android:id="@+id/question_answer_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:textStyle="bold"
+                    tools:text="正确答案：A"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <!-- 收藏按钮，右对齐，固定宽度 -->
+                <ImageButton
+                    android:id="@+id/btn_favorite"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/tar_duotone_icon" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

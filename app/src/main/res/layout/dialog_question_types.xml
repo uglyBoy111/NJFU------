@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 单选题部分 -->
+    <LinearLayout
+        android:id="@+id/single_choice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/item_pressed_bg2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单选题"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:background="@drawable/item_pressed_bg2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray_300"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/single_choice_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/item_pressed_bg2"
+            />
+    </LinearLayout>
+
+    <!-- 多选题部分 -->
+    <LinearLayout
+        android:id="@+id/multi_choice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/item_pressed_bg2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多选题"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:background="@drawable/item_pressed_bg2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray_300"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/multi_choice_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/item_pressed_bg2"/>
+    </LinearLayout>
+
+    <!-- 判断题部分 -->
+    <LinearLayout
+        android:id="@+id/true_false_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/item_pressed_bg2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="判断题"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:background="@drawable/item_pressed_bg2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray_300"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/true_false_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/item_pressed_bg2"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<!-- app/src/main/res/values/theme.xml -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 基础主题 -->
+    <style name="Theme.ShuaTi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 添加这行来设置全局字体 -->
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <!-- 确保已添加Material3颜色系统 -->
+        <item name="colorSurfaceContainer">@color/gray_100</item>
+        <item name="colorPrimaryVariant">@color/gray_700</item>
+        <item name="colorPrimary">@color/gray_600</item>
+        <item name="colorPrimaryContainer">@color/gray_200</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:background">@color/gray_300</item>
+        <!-- 次要色使用深灰色 -->
+        <item name="colorSecondary">@color/gray_800</item>
+        <item name="colorSecondaryContainer">@color/gray_300</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- 表面颜色 -->
+        <item name="colorSurface">@color/gray_50</item>
+        <item name="colorSurfaceVariant">@color/gray_100</item>
+        <item name="colorOnSurface">@color/gray_900</item>
+
+        <!-- 状态栏 -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+
+
+        <!-- 修正搜索栏引用 -->
+        <item name="materialSearchBarStyle">@style/Widget.ShuaTi.SearchBar</item>
+        <item name="floatingActionButtonStyle">@style/Widget.ShuaTi.FAB</item>
+    </style>
+
+    <!-- 日期时间文本样式 -->
+    <style name="DateTimeTextAppearance" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_700</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="RoundedDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="dialogCornerRadius">16dp</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+    </style>
+
+    <!-- 考试标题文本 -->
+    <style name="ExamTitleTextAppearance" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <!-- 辅助文本样式 -->
+    <style name="SecondaryTextAppearance" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!-- 自定义圆角 -->
+    <style name="ShapeAppearance.Shuati.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- 更大的圆角 -->
+    </style>
+
+    <style name="NavigationMenuTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- 搜索栏样式定义 -->
+    <style name="Widget.ShuaTi.SearchBar" parent="Widget.Material3.SearchBar">
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/gray_200</item>
+    </style>
+
+    <style name="Widget.ShuaTi.FAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/gray_600</item>
+    </style>
+
+</resources>

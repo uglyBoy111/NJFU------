@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="menu_single_choice" type="id"/>
+    <item name="menu_multi_choice" type="id"/>
+    <item name="menu_true_false" type="id"/>
+    <item name="menu_group_questions" type="id"/>
+</resources>
